@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>drift prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+
+</head>
+
+<body>
+ <div class="login">
+	<h1 >Floating Body Drift Analysis </h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input style="width:200px;height:40px ;font-size:20px "type="text" name="longitude" placeholder="longitude"   required="required" />
+        <input style="width:200px;height:40px;font-size:20px"  type="text" name="latitude" placeholder="latitude"  required="required" />
+		<input style="width:200px;height:40px;font-size:20px" type="text" name="time" placeholder="time" required="required" />
+
+
+        <button style="width:200px;height:50px;" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        <br>
+    
+        
+      </form>
+     
+      
+     
+   
+    
+    
+    
+    
+    
+
+    
+    
+  
+  
+   <br>
+   <br>
+
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+
+
+ </div>
+
+  <br>
+
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+  <br>
+
+   
+ <div>
+  <!--<h1>Drift Report</h1>-->
+  
+<br>
+<br>
+<br>
+</div>
+
+<div class="rerr" >
+<h1>Drifted object Report</h1>
+<p style="max-width:330px;">
+    {{ prediction_text }}
+</p>
+</div>
+</body>
+<style>
+  body{
+    background-color:lightgrey;
+  }
+  
+</style>
+
+</html>
